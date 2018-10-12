@@ -61,9 +61,10 @@ Vue.directive('scrollto', {
 		let scrollIt = function(destination, duration = 200, easing = 'linear', callback) {
 			const start = window.pageYOffset;
 			const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
-
-			const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
-			const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+			const doc = document.documentEelement;
+			const body = document.body;
+			const documentHeight = Math.max(body.scrollHeight, body.offsetHeight, doc.clientHeight, doc.scrollHeight, doc.offsetHeight);
+			const windowHeight = window.innerHeight || doc.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
 			const destinationOffset = typeof destination === 'number' ? destination : destination.getBoundingClientRect().top;
 			const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
 
