@@ -39,8 +39,21 @@ Giving extra settings like time, use comma separated values:
 
 #### Arguments
 
-| Argument  | Default   | Description                                                                                                               |
-| --------- | --------- | ------------------------------------------------------------------------------------------------------------------------- |
-| element        | undefined | Animate to this element (ID), example: '#id-of-element'                                      |
-| duration    | 1000      | Time it takes to do the animation                                     |
-| easing | 'easeOutQuad'      | The easing in the animation           |
+| Argument | Default       | Description                                             |
+| -------- | ------------- | ------------------------------------------------------- |
+| element  | undefined     | Animate to this element (ID), example: '#id-of-element' |
+| duration | 1000          | Time it takes to do the animation                       |
+| easing   | 'easeOutQuad' | The easing in the animation                             |
+
+
+#### Easings
+
+Available easings:
+
+| type   | in            | out            | inout            | default  |
+| ------ | ------------- | -------------- | ---------------- | -------- |
+| linear |               |                |                  | `linear` |
+| quad   | `easeInQuad`  | `easeOutQuad`  | `easeInOutQuad`  |          |
+| cubic  | `easeInCubic` | `easeOutCubic` | `easeInOutCubic` |          |
+| quart  | `easeInQuart` | `easeOutQuart` | `easeInOutQuart` |          |
+| quint  | `easeInQuint` | `easeOutQuint` | `easeInOutQuint` |          |
